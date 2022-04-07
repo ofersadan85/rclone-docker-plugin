@@ -6,7 +6,7 @@ Note: you need to have the `community.docker` collection installed to use this r
 
 ## Install
 
-    ansible-galaxy role install ofersadan85.rclone-docker-plugin
+    ansible-galaxy role install ofersadan85.rclone_docker_plugin
 
 ## Example Playbook
 
@@ -14,6 +14,6 @@ The simplest version without variables:
 
     - hosts: servers
       roles:
-        - ofersadan85.rclone-docker-plugin
+        - ofersadan85.rclone_docker_plugin
 
 See `defaults/main.yml` for possible variables
