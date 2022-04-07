@@ -20,6 +20,6 @@
 
 - name: Install rclone docker plugin
   community.docker.docker_plugin:
-    name: "{{ image }}:{{ tag }}"
+    plugin_name: "{{ image }}:{{ tag }}"
     alias: "{{ alias }}"
-    state: present
+    state: enable
