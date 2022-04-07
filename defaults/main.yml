@@ -1,0 +1,6 @@
+---
+image: rclone/docker-volume-rclone
+tag: latest
+alias: rclone
+cache: /var/lib/docker-plugins/rclone/cache
+config: /var/lib/docker-plugins/rclone/config

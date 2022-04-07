@@ -1,0 +1,25 @@
+---
+# tasks file for rclone-docker-plugin
+- name: Ensure cache directory exists
+  file:
+    path: "{{ cache }}"
+    state: directory
+    mode: 0755
+
+- name: Ensure config directory exists
+  file:
+    path: "{{ config }}"
+    state: directory
+    mode: 0755
+
+- name: Install required packages
+  apt:
+    pkg:
+      - fuse
+      - rclone
+
+- name: Install rclone docker plugin
+  community.docker.docker_plugin:
+    name: "{{ image }}:{{ tag }}"
+    alias: "{{ alias }}"
+    state: present
