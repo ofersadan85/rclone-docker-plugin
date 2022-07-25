@@ -7,6 +7,12 @@ Note: you need to have the `community.docker` collection installed to use this r
 ## Install
 
     ansible-galaxy role install ofersadan85.rclone_docker_plugin
+    # IF dependancies are not resolved, you will also need:
+    ansible-galaxy collection install community.docker
+    
+## Run on localhost
+
+    ansible localhost -m include_role -a name=ofersadan85.rclone_docker_plugin --become
 
 ## Example Playbook
 
